@@ -1,4 +1,4 @@
-import fetchData from "../src/fetchData.js";
+import fetchData from "./fetchData.js";
 import { getElement } from "./utils.js";
 import setupFiltering from "./setupFiltering.js";
 
@@ -42,7 +42,6 @@ const displayJobs = (jobs) => {
   </article>`;
     })
     .join("");
-
 };
 
 cardContainer.addEventListener("click", function (e) {

@@ -16,7 +16,7 @@ const setupFiltering = (id, element) => {
         return `<h3 class="filter-tag">
     <span>${item}</span>
     <button class="remove-btn">
-      <img src="/images/icon-remove.svg" class="remove-icon" alt="" />
+      <img src="images/icon-remove.svg" class="remove-icon" alt="" />
     </button>
   </h3>`;
       })
