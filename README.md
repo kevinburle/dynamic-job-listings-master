@@ -1,4 +1,4 @@
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [here](https://kevinburle.github.io/dynamic-job-listings-master/)
 
 # Frontend Mentor - Job listings with filtering solution
 
@@ -52,6 +52,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/kevinburle)
-- Twitter - [@yourusername](https://twitter.com/kevinburle)
+- Frontend Mentor - [@kevinburle](https://www.frontendmentor.io/profile/kevinburle)
+- Twitter - [@kevinburle](https://twitter.com/kevinburle)
