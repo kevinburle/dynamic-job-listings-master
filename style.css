@@ -1,0 +1,345 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* primary */
+  --primary: hsl(180, 29%, 50%);
+  /* light */
+  --white: #fff;
+  --light-background: hsl(180, 52%, 96%);
+  --light-filter-tablets: hsl(180, 31%, 95%);
+  /* dark */
+  --dark-cyan: hsl(180, 8%, 52%);
+  --very-dark-cyan: hsl(180, 14%, 20%);
+  /* font */
+  --league-spartan-font: "League Spartan", sans-serif;
+  --light-font: 500;
+  --bold-font: 700;
+  /* box shadow */
+  --box-shadow: 0 15px 15px -4px hsl(180deg 29% 50% / 20%);
+  /* default border radius */
+  --border-radius: 0.625rem;
+  /* default border radius wrapper*/
+  --border-radius-wrapper: 0.313rem;
+  /* default height search bar */
+  --default-height: 4.375rem;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--league-spartan-font);
+  background-color: var(--light-background);
+  line-height: 1.5;
+  font-size: 0.938rem;
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/*
+=============== 
+Header
+===============
+*/
+
+.header {
+  width: 100%;
+  height: 9.688rem;
+  background-image: url(./images/bg-header-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary);
+  position: relative;
+  z-index: -1;
+}
+
+/*
+=============== 
+Utils
+===============
+*/
+
+.container {
+  max-width: 1170px;
+  width: 90vw;
+}
+
+.new {
+  background-color: var(--primary);
+  margin-right: 0.15rem;
+}
+
+.featured {
+  background-color: #211;
+}
+
+.tag {
+  padding: 0.438rem 0.5rem 0.25rem;
+  border-radius: 0.938rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: var(--bold-font);
+  font-size: 0.75rem;
+}
+
+/*
+=============== 
+Search Container
+===============
+*/
+
+.search-container {
+  display: none;
+  height: auto;
+  min-height: var(--default-height);
+  margin: calc(var(--default-height) / -2) auto 3.125rem;
+  background-color: var(--white);
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  grid-template-columns: 1fr 5rem;
+}
+
+.search-container.show {
+  display: grid;
+}
+
+.clear-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.125rem;
+  color: var(--dark-cyan);
+}
+
+.clear-btn:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 0.938rem;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--bold-font);
+  background-color: var(--light-background);
+  color: var(--primary);
+  font-size: 1rem;
+  border-radius: 0.313rem;
+  overflow: hidden;
+  padding-left: 0.625rem;
+}
+.remove-btn {
+  cursor: pointer;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  margin-left: 0.625rem;
+}
+.remove-btn:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+/*
+=============== 
+Section
+===============
+*/
+
+.section-center {
+  display: grid;
+  place-content: center;
+  background-color: #effafa;
+  margin-top: 2.5rem;
+}
+
+/*
+=============== 
+Card
+===============
+*/
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 1.563rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  border-radius: var(--border-radius-wrapper);
+  margin-bottom: 1.563rem;
+}
+
+.featured-card {
+  border-left: 5px solid var(--primary);
+}
+
+.card-resume {
+  display: flex;
+}
+
+.card-info {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.card-items .company {
+  color: var(--primary);
+  font-weight: var(--bold-font);
+  font-size: 1.125rem;
+  margin-right: 0.8rem;
+}
+
+.card-title {
+  font-weight: var(--bold-font);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: var(--primary);
+}
+
+.card-list-items {
+  color: var(--dark-cyan);
+  font-size: 1rem;
+}
+
+.card-list-items span {
+  padding: 0 0.5rem;
+}
+
+.card-filters {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-filters .btn {
+  padding: 0.5rem;
+  margin-left: 0.938rem;
+  font-weight: var(--bold-font);
+  background-color: var(--light-background);
+  color: var(--primary);
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.313rem;
+  font-family: inherit;
+}
+
+.card-filters .btn:hover {
+  background-color: var(--primary);
+  color: var(--light-background);
+}
+
+@media only screen and (max-width: 1010px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .card-filters {
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .search-container {
+    padding: 1.25rem;
+    grid-template-columns: 1fr 3rem;
+  }
+
+  .container {
+    max-width: 340px;
+  }
+
+  .card-resume {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.938rem 0 0.938rem 0;
+    border-bottom: 1px solid #474545;
+  }
+
+  .card-info {
+    margin: initial;
+  }
+
+  .card-wrapper {
+    grid-template-columns: initial;
+    grid-template-rows: 1fr 1fr;
+    padding: 1.25rem 1.25rem 0.625rem 1.25rem;
+    position: relative;
+    margin-bottom: 2.813rem;
+  }
+
+  .card-filters {
+    margin-top: 0.938rem -0.8rem;
+    justify-content: flex-start;
+  }
+
+  .card-filters .btn {
+    margin-left: initial;
+    margin-right: 0.938rem;
+  }
+
+  .logo {
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .card-title {
+    padding: 0.5rem 0;
+    font-size: 1.063rem;
+  }
+}
